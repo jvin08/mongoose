@@ -7,7 +7,7 @@ var express = require('express');
 var app = express();
 try{
   var mongoose = require('mongoose');
-  mongoose.connect(MONGO_URI);
+  mongoose.connect(process.env.MONGO_URI);
 } catch (e) {
   console.log(e);
 }
